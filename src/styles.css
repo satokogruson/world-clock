@@ -6,38 +6,123 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
+
 body {
-	min-height: 100vh;
-	padding: 20px;
-	background:	#cde6f3;
-}
-section {
-	position: relative;
+	background-image: url("./img/Abstract_BG.jpg");
+	background-size: cover;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column;
-}
-h1 {
-	position: relative;
-	font-size: 30px;
-	font-weight: 500;
-	text-align: center;
-	width: 100%;
-	padding: 10px;
-	margin: 10px auto 30px;
-	color: #393939;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 30px;
 }
 
-.wrapper {
-	position: relative;
-	width: 100%;
-	height: 100%;
+.card {
+	width: 520px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(35px);
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+	padding: 30px 30px 30px 30px;
+	overflow: hidden;
+
+}
+
+.world-clock-card-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 30px;
+	border-bottom: none;
+	color: #ffff;
+}
+
+.clock-logo {
+	width: 40px;
+}
+
+.drop-down {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+}
+
+.form-select {
+	margin: 30px;
+	padding: 8px 20px;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 14px;
+	color: #9ea1a3;
+}
+
+.world-clock-card-body {
+	padding: 1.5rem;
+
+}
+
+.time-zone {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 20px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.1)
+}
+
+.city-name {
+	font-size: 1.35rem;
+	color: #ffff;
+	font-weight: bolder;
+}
+
+.country-flag {
+	width: 1.5rem;
+	height: auto;
+	text-align: center;
+}
+
+.date {
+	color: #dedddd;
+	font-size: 1rem;
+	font-weight: lighter;
+}
+
+.left-side {
+	display: flex;
+	flex-direction: column;
+}
+
+.flag-us {
+	background-image: url('path-to-us-flag.png');
+}
+
+.flag-au {
+	background-image: url('path-to-au-flag.png');
+}
+
+.flag-jp {
+	background-image: url('path-to-jp-flag.png');
+}
+
+.flag-fr {
+	background-image: url('path-to-fr-flag.png');
+}
+
+.time {
+	font-size: 24px;
+	font-weight: 800;
+	color: #ffff;
 }
 
 footer {
+	margin: 50px auto;
 	text-align: center;
+	color: #f8f9fa;
+}
+
+a {
+	color: rgb(248, 239, 164);
 }
