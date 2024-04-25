@@ -26,9 +26,10 @@ function updateCity(event) {
     }
     let cityName = cityTimeZone === "current" ? moment.tz.guess().split("/")[1].replace("_", " ") : cityTimeZone.split("/")[1].replace("_", " ");
     let cityFlag = event.target.options[event.target.selectedIndex].dataset.flag;
-    cityFlag = cityFlag === "local" ? "https://flagcdn.com/28x21/" + moment.tz.guess().toLowerCase().split("/")[1].substring(0, 2) + ".png" : cityFlag; // Handle local flag if set
+    cityFlag = cityFlag === "local" ? "https://flagcdn.com/28x21/" + moment.tz.guess().toLowerCase().split("/")[1].substring(0, 2) + ".png" : cityFlag; 
     console.log(cityFlag)
     let cityTime = moment().tz(cityTimeZone);
+    console.log(cityTime)
     let citiesElement = document.querySelector("#time-zone");
     citiesElement.innerHTML = `
             <div class="city-name">
@@ -49,6 +50,7 @@ function updateCity(event) {
             </div>
 `;
 }
+
 
 updateTime();
 setInterval(updateTime, 1000);
