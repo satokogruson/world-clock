@@ -20,79 +20,30 @@
         <div class="drop-down">
           <select
             class="form-select form-select-lg mb-3"
+            id="city-name"
             aria-label="Choose city"
           >
-            <option selected>Choose city</option>
-            <option value="1">New York</option>
-            <option value="2">Melbourne</option>
-            <option value="3">Tokyo</option>
-            <option value="4">Paris</option>
+            <option value="">Select a city...</option>
+            <option value="America/New_York" data-flag="./src/img/united-states_flag.png">New York</option>
+            <option value="Australia/Melbourne" data-flag="./src/img/australia_flag.png">Melbourne</option>
+            <option value="Asia/Tokyo" data-flag="./src/img/japan_flag.png">Tokyo</option>
+            <option value="Europe/Paris" data-flag="./src/img/france_flag.png">Paris</option>
           </select>
         </div>
         <div class="card-body world-clock-card-body">
-          <div class="time-zone">
-            <div class="city-name" id="new-york">
+          <div class="time-zone" id="time-zone">
+            <div class="city-name">
               <div class="left-side">
                 <div class="city-flag">
-                  New York
                   <img
-                    src="./src/img/united-states_flag.png"
-                    alt="US Flag"
-                    class="country-flag flag-us"
+                    src=""
+                    alt="Flag"
+                    class="country-flag"
                   />
                 </div>
-                <div class="date">August 15th 2022</div>
+                <div class="date"></div>
               </div>
-              <div class="time">1:48:15 <small>AM</small></div>
-            </div>
-          </div>
-
-          <div class="time-zone">
-            <div class="city-name" id="melbourne">
-              <div class="left-side">
-                <div class="city-flag">
-                  Melbourne
-                  <img
-                    src="./src/img/australia_flag.png"
-                    alt="AUS Flag"
-                    class="country-flag flag-aus"
-                  />
-                </div>
-                <div class="date">August 15th 2022</div>
-              </div>
-              <div class="time">1:48:15 <small>AM</small></div>
-            </div>
-          </div>
-          <div class="time-zone">
-            <div class="city-name" id="tokyo">
-              <div class="left-side">
-                <div class="city-flag">
-                  Tokyo
-                  <img
-                    src="./src/img/japan_flag.png"
-                    alt="JP Flag"
-                    class="country-flag flag-jp"
-                  />
-                </div>
-                <div class="date">August 15th 2022</div>
-              </div>
-              <div class="time">1:48:15 <small> AM</small></div>
-            </div>
-          </div>
-          <div class="time-zone">
-            <div class="city-name" id="paris">
-              <div class="left-side">
-                <div class="city-flag">
-                  Paris
-                  <img
-                    src="./src/img/france_flag.png"
-                    alt="FR Flag"
-                    class="country-flag flag-us"
-                  />
-                </div>
-                <div class="date">August 15th 2022</div>
-              </div>
-              <div class="time">1:48:15 <small>AM</small></div>
+              <div class="time"></div>
             </div>
           </div>
         </div>

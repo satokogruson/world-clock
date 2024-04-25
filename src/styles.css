@@ -62,7 +62,7 @@ body {
 }
 
 .world-clock-card-body {
-	padding: 30px;
+	padding: 0 30px;
 }
 
 .time-zone {
@@ -79,10 +79,10 @@ body {
 .left-side {
 	display: flex;
 	flex-direction: column;
-	width:40%;
+	width: 40%;
 }
 
-.city-flag{
+.city-flag {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
