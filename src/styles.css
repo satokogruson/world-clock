@@ -19,7 +19,7 @@ body {
 }
 
 .card {
-	width: 520px;
+	width: 550px;
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(35px);
@@ -58,30 +58,51 @@ body {
 }
 
 .world-clock-card-body {
-	padding: 1.5rem;
-
+	padding: 30px;
 }
 
 .time-zone {
 	display: flex;
-	flex-direction: row;
+	width: 100%;
 	justify-content: space-between;
+	align-items: center;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	padding: 20px;
+	padding: 20px 0;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.1)
 }
 
+.left-side {
+	display: flex;
+	flex-direction: column;
+	width:40%;
+}
+
+.city-flag{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.time-zone {
+	display: flex;
+}
+
 .city-name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 	font-size: 1.35rem;
 	color: #ffff;
 	font-weight: bolder;
+	padding: 0;
 }
 
 .country-flag {
-	width: 1.5rem;
+	width: 1.75rem;
 	height: auto;
-	text-align: center;
+	align-items: center;
 }
 
 .date {
@@ -90,28 +111,30 @@ body {
 	font-weight: lighter;
 }
 
-.left-side {
+.time {
+	text-align: center;
+	line-height: normal;
+}
+
+small {
 	display: flex;
-	flex-direction: column;
+	margin-left: 5px;
+	align-items: center;
+	font-size: medium;
 }
 
-.flag-us {
-	background-image: url('path-to-us-flag.png');
-}
-
-.flag-au {
-	background-image: url('path-to-au-flag.png');
-}
-
-.flag-jp {
-	background-image: url('path-to-jp-flag.png');
-}
-
+.flag-us,
+.flag-au,
+.flag-jp,
 .flag-fr {
-	background-image: url('path-to-fr-flag.png');
+	background-image: url('path-to-us-flag.png');
+	margin-left: 10px;
 }
+
 
 .time {
+	display: flex;
+	justify-content: flex-end;
 	font-size: 24px;
 	font-weight: 800;
 	color: #ffff;
