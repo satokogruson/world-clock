@@ -18,21 +18,86 @@
           <img class="clock-logo" src="./src/img/clock_logo.png" />
         </div>
         <div class="drop-down">
-<select class="form-select form-select-lg mb-3" id="city-name" aria-label="Choose city">
-  <option value="current" data-flag="local">Local Time</option>
-  <option value="America/New_York" data-flag="https://flagcdn.com/256x192/us.png">New York</option>
-  <option value="Australia/Melbourne" data-flag="https://flagcdn.com/256x192/au.png">Melbourne</option>
-  <option value="Asia/Tokyo" data-flag="https://flagcdn.com/256x192/jp.png">Tokyo</option>
-  <option value="Europe/Paris" data-flag="https://flagcdn.com/256x192/fr.png">Paris</option>
-</select>
-
+          <select
+            class="form-select form-select-lg mb-3"
+            id="city-name"
+            aria-label="Choose city"
+          >
+            <option value="">Select a city..</option>
+            <option value="current" data-flag="local">Local Time</option>
+            <option
+              value="America/New_York"
+              data-flag="https://flagcdn.com/256x192/us.png"
+            >
+              New York
+            </option>
+            <option
+              value="Australia/Melbourne"
+              data-flag="https://flagcdn.com/256x192/au.png"
+            >
+              Melbourne
+            </option>
+            <option
+              value="Asia/Tokyo"
+              data-flag="https://flagcdn.com/256x192/jp.png"
+            >
+              Tokyo
+            </option>
+            <option
+              value="Europe/Paris"
+              data-flag="https://flagcdn.com/256x192/fr.png"
+            >
+              Paris
+            </option>
+          </select>
         </div>
         <div class="card-body world-clock-card-body">
           <div class="time-zone" id="time-zone">
             <div class="city-name">
               <div class="left-side">
                 <div class="city-flag">
-                  <img id="flag-image"
+                  <img id="flag-image" />
+                </div>
+                <div class="date"></div>
+              </div>
+              <div class="time"></div>
+            </div>
+          </div>
+          <div class="time-zone">
+            <div class="city-name" id="new-york">
+              <div class="left-side">
+                <div class="city-flag">
+                  New York
+                  <img
+                    src="https://flagcdn.com/28x21/us.png"
+                    srcset="
+                      https://flagcdn.com/56x42/us.png 2x,
+                      https://flagcdn.com/84x63/us.png 3x
+                    "
+                    width="28"
+                    height="21"
+                    alt="United States"
+                  />
+                </div>
+                <div class="date"></div>
+              </div>
+              <div class="time"></div>
+            </div>
+          </div>
+          <div class="time-zone">
+            <div class="city-name" id="melbourne">
+              <div class="left-side">
+                <div class="city-flag">
+                  Melbourne
+                  <img
+                    src="https://flagcdn.com/28x21/au.png"
+                    srcset="
+                      https://flagcdn.com/56x42/au.png 2x,
+                      https://flagcdn.com/84x63/au.png 3x
+                    "
+                    width="28"
+                    height="21"
+                    alt="Australia"
                   />
                 </div>
                 <div class="date"></div>
