@@ -57,6 +57,10 @@ body {
 	color: #9ea1a3;
 }
 
+.world-clock-card {
+	padding-top: 50px;
+}
+
 .world-clock-card-body {
 	padding: 30px;
 }
