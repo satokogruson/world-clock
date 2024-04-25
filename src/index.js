@@ -21,6 +21,9 @@ function updateTime() {
 
 function updateCity(event) {
     let cityTimeZone = event.target.value;
+    if(cityTimeZone=== "current"){
+        cityTimeZone=moment.tz.guess();
+    }
     let cityName = cityTimeZone.split("/")[1].replace("_", " ");
     let cityFlag = event.target.options[event.target.selectedIndex].dataset.flag;
     console.log(cityFlag)
