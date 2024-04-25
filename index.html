@@ -18,18 +18,14 @@
           <img class="clock-logo" src="./src/img/clock_logo.png" />
         </div>
         <div class="drop-down">
-          <select
-            class="form-select form-select-lg mb-3"
-            id="city-name"
-            aria-label="Choose city"
-          >
-            <option selected disabled>Select a city...</option>
-            <option value="current">My current location</option>
-            <option value="America/New_York" data-flag="./src/img/united-states_flag.png">New York</option>
-            <option value="Australia/Melbourne" data-flag="./src/img/australia_flag.png">Melbourne</option>
-            <option value="Asia/Tokyo" data-flag="./src/img/japan_flag.png">Tokyo</option>
-            <option value="Europe/Paris" data-flag="./src/img/france_flag.png">Paris</option>
-          </select>
+<select class="form-select form-select-lg mb-3" id="city-name" aria-label="Choose city">
+  <option value="current" data-flag="local">Local Time</option>
+  <option value="America/New_York" data-flag="https://flagcdn.com/256x192/us.png">New York</option>
+  <option value="Australia/Melbourne" data-flag="https://flagcdn.com/256x192/au.png">Melbourne</option>
+  <option value="Asia/Tokyo" data-flag="https://flagcdn.com/256x192/jp.png">Tokyo</option>
+  <option value="Europe/Paris" data-flag="https://flagcdn.com/256x192/fr.png">Paris</option>
+</select>
+
         </div>
         <div class="card-body world-clock-card-body">
           <div class="time-zone" id="time-zone">
