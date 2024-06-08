@@ -20,44 +20,46 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-  if (cityTimeZone === "current") {
+  let melbourneElement = document.querySelector("#melbourne");
+  let melbourneContainer = document.querySelector("#time-zone-2"); 
+  melbourneContainer.style.display = "none";
+
+  if (cityTimeZone === "current" || cityTimeZone === "") {
     cityTimeZone = moment.tz.guess();
   }
 
   let cityName = cityTimeZone.split("/")[1].replace("_", " ");
 
-  let melbourneElement = document.querySelector("#melbourne");
-  let melbourneContainer = document.querySelector("#time-zone-2"); 
-  if (cityName.toLowerCase() === "melbourne") {
-    melbourneElement.style.display = "block";
-    melbourneContainer.classList.remove("hidden");
+  let cityFlag;
+  if (cityTimeZone === moment.tz.guess() || cityTimeZone === "current") {
+    let countryCode = cityTimeZone.split('/')[0].toLowerCase(); 
+    cityFlag = `https://flagcdn.com/28x21/${countryCode.substring(0, 2)}.png`;
   } else {
-    melbourneElement.style.display = "none";
-    melbourneContainer.classList.add("hidden");
+    cityFlag = event.target.options[event.target.selectedIndex].dataset.flag;
   }
 
-  let cityFlag = event.target.options[event.target.selectedIndex].dataset.flag;
-  cityFlag = cityFlag === "local" ? "https://flagcdn.com/28x21/" + moment.tz.guess().toLowerCase().split("/")[1].substring(0, 2) + ".png" : cityFlag;
   let cityTime = moment().tz(cityTimeZone);
-
   let citiesElement = document.querySelector("#time-zone");
-  citiesElement.innerHTML = `
-    <div class="city-name">
-      <div class="left-side">
-        <div class="city-flag">
-          ${cityName}
-          <img
-            src="${cityFlag}"
-            alt="${cityName} Flag"
-            class="country-flag"
-          />
-        </div>
-        <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
-      </div>
-      <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
-    </div>
-  `;
+  citiesElement.innerHTML = createCityBlock(cityTimeZone, cityName, cityFlag, cityTime);
 }
+
+function createCityBlock(cityTimeZone, cityName, cityFlag, cityTime) {
+  return `
+        <div class="city-name">
+            <div class="left-side">
+                <div class="city-flag">
+                    ${cityName}
+                    <img src="${cityFlag}" alt="${cityName} Flag" class="country-flag"/>
+                </div>
+                <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+            </div>
+            <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
+        </div>
+    `;
+}
+
+
+
 
 updateTime();
 setInterval(updateTime, 1000);
